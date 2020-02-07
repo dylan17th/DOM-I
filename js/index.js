@@ -40,3 +40,34 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// navigation bar information
+let navBar1 = document.querySelector('a');
+let navBar2 = document.querySelector('a:nth-child(2)');
+let navBar3 = document.querySelector('a:nth-child(3)');
+let navBar4 = document.querySelector('a:nth-child(4)');
+let navBar5 = document.querySelector('a:nth-child(5)');
+let navBar6 = document.querySelector('a:nth-child(6)');
+
+
+navBar1.textContent = "Services";
+navBar2.textContent = "Product";
+navBar3.textContent = "Vision";
+navBar4.textContent = "Features";
+navBar5.textContent = "About";
+navBar6.textContent = "contact";
+
+//section cta infromation 
+let headingTop = document.querySelector('h1');
+
+
+//creation of the linebreak element
+let lineBreak = document.createElement('br');
+let lineBreak2 = document.createElement('br');
+
+headingTop.textContent ='Dom Is Awesome';
+headingTop.appendChild(lineBreak);
+headingTop.appendChild(lineBreak2);
+
+
+
