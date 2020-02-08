@@ -86,13 +86,20 @@ navBar8.textContent = "Meet Team";
 const headingTop = document.querySelector('h1');
 
 //assign h1 variable text content
-headingTop.textContent = siteContent.cta.h1;
-
-//need to assign a line break in h1 variable
-
+headingTop.textContent = "Dom\n Is\n  Awesome";
+headingTop.style.whiteSpace = 'pre';
 
 //created a button variable
 const button = document.querySelector('button');
+
+//creating a submit button
+const subButton = document.createElement('button');
+
+//creating a submit content/width
+subButton.textContent = 'submit';
+subButton.style.width = "6rem";
+subButton.style.marginLeft= '.5rem';
+subButton.style.backgroundColor = 'seagreen';
 
 //adding background color/border/radius to the button
 button.style.backgroundColor = 'seagreen';
@@ -131,7 +138,7 @@ emailInput.name = 'email';
 //making the box wider
 nameInput.style.width = '15rem';
 nameInput.style.height = '2rem';
-emailInput.style.width = '23rem';
+emailInput.style.width = '21rem';
 emailInput.style.height = '2rem';
 
 //appending the inputs to the corresponding labels
@@ -149,19 +156,30 @@ function addForms(){
 ctaDiv.appendChild(divForSign);
 divForSign.appendChild(nameLabel);
 divForSign.appendChild(emailLabel);
+divForSign.appendChild(subButton);
 ctaDiv.style.justifyContent = "space-around";
 ctaImage.style.width ='40%';
 ctaDiv.style.flexWrap="wrap";
 divForSign.style.display = 'flex';
-divForSign.style.justifyContent = 'space-between';
+divForSign.style.justifyContent = 'flex-start';
+divForSign.style.width = '100%';
 divForSign.style.marginTop = '2rem';
 divForSign.style.marginBottom = '-3rem';
-divForSign.style.padding = '2rem';
+divForSign.style.padding = '1rem';
 emailLabel.style.display ='block';
 nameLabel.style.display ='block';
 emailLabel.style.fontSize ='1.5rem';
 nameLabel.style.fontSize ='1.5rem';
 }
+
+//making thank you function for submit 
+function thankYou(){
+  divForSign.textContent = 'Thank you for signing up for Great Ideas. Check your email for confirmation';
+  divForSign.style.justifyContent = 'center';
+}
+
+//creating an eventlistener for the submit button
+subButton.addEventListener('click', thankYou)
 
 //creating a event listener for the button on click
 button.addEventListener('click', addForms);
